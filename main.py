@@ -53,7 +53,7 @@ def draw_positions(frame, decoded_objs):
   for decoded_obj in decoded_objs:
     left, top, width, height = decoded_obj.rect
     frame = cv2.rectangle(frame, (left,top), (left + width, height + top), (0, 0, 255), 2)
-    frame = cv2.putText(frame, 'Data: ' + 'Hello', (left,top+20), font, 1, (0,255,0),2,cv2.LINE_AA)
+    frame = cv2.putText(frame, 'Data: ' + decoded_obj.data, (left,top+20), font, 1, (0,255,0),2,cv2.LINE_AA)
   frame = cv2.putText(frame, 'Detected QR codes: ' + str(len(decoded_objs)) ,(10,40),font,1,(0,0,255),2,cv2.LINE_AA)
 
 if __name__ == '__main__':
