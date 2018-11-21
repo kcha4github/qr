@@ -51,7 +51,7 @@ def decode(frame):
 def draw_positions(frame, decoded_objs):
   for decoded_obj in decoded_objs:
     left, top, width, height = decoded_obj.rect
-    frame = cv2.rectangle(frame, (left,top), (left + width, height + top), (0, 255, 0), 2)
+    frame = cv2.rectangle(frame, (left,top), (left + width, height + top), (２５５, 255, 0), 2)
 
 if __name__ == '__main__':
   app.run(host="0.0.0.0", debug=False, threaded=True)
